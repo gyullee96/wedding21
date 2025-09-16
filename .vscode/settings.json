@@ -1,0 +1,36 @@
+{
+  // 저장 시 자동 포맷
+  "editor.formatOnSave": true,
+
+  // 이 워크스페이스의 기본 포매터를 Prettier로 고정
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // Prettier가 로컬(프로젝트) 버전을 사용하도록 지정
+  "prettier.prettierPath": "node_modules/prettier",
+
+  // ESLint도 함께 쓰는 경우: 저장 시 자동 고침
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+
+  // 어떤 언어에서 Prettier를 쓸지 명시 (충돌 방지)
+  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[javascriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[markdown]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+
+  // Tailwind 클래스를 Prettier가 정렬하도록(플러그인에 의해 자동 적용)
+  "tailwindCSS.experimental.classRegex": [
+    "clsx\\(([^)]*)\\)",
+    "cx\\(([^)]*)\\)"
+  ],
+
+  // js 파일도 JSX로 인식 (자동완성 정상화)
+  "files.associations": {
+    "*.js": "javascriptreact"
+  }
+}
