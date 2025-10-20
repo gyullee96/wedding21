@@ -1,30 +1,37 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b bg-white/80 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-        <Link
-          href="/"
-          className="text-xl font-extrabold tracking-tight text-pink-300"
-        >
-          wedding21
-        </Link>
-        <nav className="flex items-center gap-6 text-sm">
-          <Link href="/plan" className="hover:underline">
-            웨딩준비
+    <header className="sticky top-0 z-40 bg-white/80 backdrop-blur">
+      <div className="mx-auto flex max-w-6xl flex-col items-center px-4 py-8">
+        <Image
+          src="/images/hero/wedding21_logo.png"
+          alt="logo"
+          width={240}
+          height={80}
+          className="object-cover"
+        />
+      </div>
+      <div className="mx-auto flex max-w-7xl items-center justify-center pt-4">
+        <nav className="font-m flex items-center gap-10 font-semibold">
+          <Link href="/Wedding" className="hover:underline">
+            Wedding
           </Link>
-          <Link href="/dress" className="hover:underline">
-            웨딩드레스
+          <Link href="/Trend" className="hover:underline">
+            Trend
           </Link>
-          <Link href="/beautyfashion" className="hover:underline">
-            뷰티/패션
+          <Link href="/Life" className="hover:underline">
+            Life
           </Link>
-          <Link href="/travellife" className="hover:underline">
-            여행/라이프
+          <Link href="/Interview" className="hover:underline">
+            Interview
           </Link>
-          <Link href="/about" className="hover:underline">
-            About
+          <Link href="/community" className="hover:underline">
+            Community
+          </Link>
+          <Link href="/contact" className="hover:underline">
+            Contact
           </Link>
         </nav>
       </div>
